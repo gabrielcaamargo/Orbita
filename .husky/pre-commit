@@ -1,0 +1,3 @@
+npx tsc --noEmit
+
+echo "✅ Everything is fine"
