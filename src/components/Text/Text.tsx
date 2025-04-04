@@ -16,7 +16,7 @@ type TextPresets =
 	| 'captionSmall';
 
 type FontWeight = 'Bold' | 'SemiBold' | 'Medium' | 'Regular';
-type FontFamily = 'Inter' | 'Montserrat';
+type FontFamily = 'Nunito' | 'Montserrat';
 
 interface TextProps
 	extends Omit<RestyleTextProps<Theme>, 'fontWeight'>,
@@ -47,8 +47,9 @@ const textPresets: Record<TextPresets, {fontSize: number; lineHeight: number}> =
 export function Text({
 	preset = 'paragraphMedium',
 	weight = 'Regular',
-	fontFamily = 'Inter',
+	fontFamily = 'Nunito',
 	children,
+	...textProps
 }: TextProps) {
 	const RestyleText = createText<Theme>();
 
@@ -56,6 +57,7 @@ export function Text({
 
 	return (
 		<RestyleText
+			{...textProps}
 			fontFamily={getFontFamilyStyles(fontFamily, weight)}
 			fontSize={textSelectedPreset.fontSize}
 			lineHeight={textSelectedPreset.lineHeight}>

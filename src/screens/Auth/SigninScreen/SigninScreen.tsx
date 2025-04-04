@@ -1,6 +1,4 @@
-import {Text} from 'react-native';
-
-import {Box} from '@components';
+import {Box, Text} from '@components';
 
 export function SigninScreen() {
 	return (
@@ -9,7 +7,9 @@ export function SigninScreen() {
 			justifyContent="center"
 			alignItems="center"
 			backgroundColor="orbitalBlue">
-			<Text>SigninScreen</Text>
+			<Text preset="headingMedium" color="white">
+				SigninScreennn
+			</Text>
 		</Box>
 	);
 }

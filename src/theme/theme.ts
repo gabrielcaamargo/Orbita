@@ -62,7 +62,9 @@ const theme = createTheme({
 		s16: 16,
 	},
 
-	textVariants: {},
+	textVariants: {
+		defaults: {},
+	},
 });
 
 type Theme = typeof theme;
