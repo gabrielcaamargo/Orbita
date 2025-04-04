@@ -48,6 +48,7 @@ export function Text({
 	preset = 'paragraphMedium',
 	weight = 'Regular',
 	fontFamily = 'Nunito',
+	color = 'textPrimary',
 	children,
 	...textProps
 }: TextProps) {
@@ -57,10 +58,11 @@ export function Text({
 
 	return (
 		<RestyleText
-			{...textProps}
 			fontFamily={getFontFamilyStyles(fontFamily, weight)}
 			fontSize={textSelectedPreset.fontSize}
-			lineHeight={textSelectedPreset.lineHeight}>
+			lineHeight={textSelectedPreset.lineHeight}
+			color={color}
+			{...textProps}>
 			{children}
 		</RestyleText>
 	);
