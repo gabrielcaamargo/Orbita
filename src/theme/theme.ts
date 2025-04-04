@@ -23,6 +23,7 @@ const palette = {
 	grayMain: '#9AA5B1',
 	grayDark: '#616E7C',
 	grayDarker: '#323B4C',
+	transparent: '#FFF00',
 };
 
 const theme = createTheme({
