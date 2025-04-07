@@ -1,22 +1,32 @@
 import {ScrollView, ScrollViewProps, View, ViewProps} from 'react-native';
 
-interface ScrollViewContainerProps extends ScrollViewProps {}
-interface ViewContainerProps extends ViewProps {}
+interface ScrollViewContainerProps extends ScrollViewProps {
+	backgroundColor: string;
+}
+
+interface ViewContainerProps extends ViewProps {
+	backgroundColor: string;
+}
 
 export function ScrollViewContainer({
 	children,
+	backgroundColor,
 	...scrollViewProps
 }: ScrollViewContainerProps) {
 	return (
-		<ScrollView {...scrollViewProps} style={{flex: 1}}>
+		<ScrollView style={{flex: 1, backgroundColor}} {...scrollViewProps}>
 			{children}
 		</ScrollView>
 	);
 }
 
-export function ViewContainer({children, ...viewProps}: ViewContainerProps) {
+export function ViewContainer({
+	children,
+	backgroundColor,
+	...viewProps
+}: ViewContainerProps) {
 	return (
-		<View {...viewProps} style={{flex: 1}}>
+		<View style={{flex: 1, backgroundColor}} {...viewProps}>
 			{children}
 		</View>
 	);
