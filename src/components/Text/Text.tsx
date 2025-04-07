@@ -5,6 +5,7 @@ import {createText, TextProps as RestyleTextProps} from '@shopify/restyle';
 import {Theme} from '@theme';
 
 type TextPresets =
+	| 'headingExtraLarge'
 	| 'headingLarge'
 	| 'headingMedium'
 	| 'headingSmall'
@@ -33,6 +34,7 @@ function getFontFamilyStyles(fontFamily: FontFamily, fontWeight: FontWeight) {
 
 const textPresets: Record<TextPresets, {fontSize: number; lineHeight: number}> =
 	{
+		headingExtraLarge: {fontSize: 36, lineHeight: 44},
 		headingLarge: {fontSize: 28, lineHeight: 34},
 		headingMedium: {fontSize: 24, lineHeight: 30},
 		headingSmall: {fontSize: 20, lineHeight: 26},
