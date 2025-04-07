@@ -7,9 +7,17 @@ export function ScrollViewContainer({
 	children,
 	...scrollViewProps
 }: ScrollViewContainerProps) {
-	return <ScrollView {...scrollViewProps}>{children}</ScrollView>;
+	return (
+		<ScrollView {...scrollViewProps} style={{flex: 1}}>
+			{children}
+		</ScrollView>
+	);
 }
 
 export function ViewContainer({children, ...viewProps}: ViewContainerProps) {
-	return <View {...viewProps}>{children}</View>;
+	return (
+		<View {...viewProps} style={{flex: 1}}>
+			{children}
+		</View>
+	);
 }
